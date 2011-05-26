@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+$: << File.expand_path('../../lib', __FILE__)
+
+require 'bundler'; Bundler.setup(:default)
+
+require 'thick'
+
+Thick.server(:port => 8080) do |target, request, response|
+  if target && request && response
+    response.content_type = 'text/html;charset=utf-8'
+    response.status = 200
+    response << '<h1>Hello World</h1>'
+  end
+end
