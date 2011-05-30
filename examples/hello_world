@@ -6,7 +6,7 @@ require 'bundler'; Bundler.setup(:default)
 
 require 'thick'
 
-Thick.server(:port => 8080) do |target, request, response|
+Thick::Server.new(:port => 8080).start do |target, request, response|
   if target && request && response
     response.content_type = 'text/html;charset=utf-8'
     response.status = 200

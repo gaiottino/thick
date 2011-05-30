@@ -4,6 +4,10 @@ module Thick
       @request = request
     end
     
+    def method
+      @request.get_method
+    end
+    
     def method_missing(name, *args)
       @request.send(name, *args)
     end

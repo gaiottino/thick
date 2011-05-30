@@ -9,6 +9,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   thick!
