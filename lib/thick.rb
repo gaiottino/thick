@@ -51,3 +51,4 @@ end
 
 require 'thick/request'
 require 'thick/response'
+require 'thick/output_stream'
